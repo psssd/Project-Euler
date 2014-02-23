@@ -1,0 +1,13 @@
+package problems;
+
+public class DifferenceSquares_prob6 {
+
+	public static void main(String[] args) {
+		int difference = 5050*5050;
+		for(int i = 1 ; i<101 ; i++ ){
+			difference = difference  - i*i;
+		}
+		System.out.println("Difference is: "+difference);
+	}
+
+}
