@@ -1,0 +1,36 @@
+package problems;
+
+public class PrimeFactors_prob3 {
+
+	public static void main(String[] args) {
+		System.out.println("Largest Prime Factor: "+largestPrimeFactor(600851475143l));
+
+	}
+	static long largestPrimeFactor(long n){
+		long largest = n;
+		long temp = n;
+		long i = 3;
+		while(i < (temp/2 + 1)){
+			if(n % i == 0){	
+				n = n/i;
+				if(prime(i)){
+				largest = i;
+				}					
+			}
+			i += 2;
+		}
+		return largest;
+	}
+	static boolean prime(long n){
+		long i = 2;
+		while(i < n/2){
+			if(n % i == 0){
+				return false;
+			}
+			else {
+				i++;
+			}
+		}
+		return true;
+	}
+}
