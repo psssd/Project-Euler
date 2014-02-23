@@ -1,0 +1,24 @@
+package problems;
+
+public class SmallestMultiple_prob5 {
+
+	public static void main(String[] args) {
+		int i =2521;
+		boolean val = true;
+		while(val){
+			for(int j = 2 ; j < 20; j++){
+				if(i % j == 0){
+					val = false;
+				}
+				else{
+					i++;
+					val = true;
+					break;
+				}
+			}
+		}
+		System.out.println(i);
+
+	}
+
+}
