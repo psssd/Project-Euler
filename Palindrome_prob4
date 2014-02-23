@@ -1,0 +1,37 @@
+package problems;
+
+public class Palindrome_prob4 {
+
+	public static void main(String[] args) {
+		System.out.println("Largest Palindrome: "+largestPalindrome());
+	}
+	public static int largestPalindrome(){
+		int largest = 0;
+		for(int i = 101; i < 1000; i++){
+			for(int j = 100; j < 1000; j++){
+				int n = i*j;
+				if(palindrome(n)){
+					if(n > largest){
+						largest = n;
+					}
+				}
+			}
+		}
+		return largest;
+	}
+	private static boolean palindrome(int n) {
+		int temp = n;
+		int reverse = 0;
+		while(temp != 0){
+			reverse = reverse*10 + temp%10;
+			temp = temp/10;
+		}
+		if(reverse == n){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+}
