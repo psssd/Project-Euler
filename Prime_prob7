@@ -1,0 +1,32 @@
+package problems;
+
+public class Prime_prob7 {
+
+	public static void main(String[] args) {
+		int i = 3;
+		int count = 1;
+		while(count < 10001) {
+			if(prime(i)){
+				++count;
+			}
+			if(count == 10001)
+				break;
+			i += 2;
+		}
+		System.out.println("10001st prime number is: "+i);
+	}
+	
+	static boolean prime(int n){
+		int j = 2;
+		while(j < n){
+			if(n % j == 0){
+				return false;
+			}
+			else {
+				j++;
+			}
+		}
+		return true;
+	}
+
+}
